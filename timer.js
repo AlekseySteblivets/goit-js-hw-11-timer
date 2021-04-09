@@ -31,7 +31,7 @@ class Timer {
 
     getDays() {
         const days = Math.floor(this.countdown / (1000 * 60 * 60 * 24));
-        return transformDataValue(days);
+        return transformValue(days);
 
     }
 
@@ -59,9 +59,5 @@ function transformValue (value) {
     return String(value).padStart(2, '0');
 } 
 
-function transformDataValue (value) {
-    return String(value).padStart(3, '0');
-} 
-
-const timer = new Timer ('span[data-value=days]', 'span[data-value=hours]', 'span[data-value=mins]', 'span[data-value=secs]', 5555500000);
+const timer = new Timer ('span[data-value=days]', 'span[data-value=hours]', 'span[data-value=mins]', 'span[data-value=secs]', 55500000);
 timer.init();
